@@ -2,7 +2,7 @@ import { ComponentProps } from "react"
 
 type Tvariant= "primary"|"secondry"|"danger"|"success"|"warning";
 type Tbutton= ComponentProps<"button"> &{
-    variant: Tvariant
+    variant?: Tvariant
 
 }
 function Button({children,variant, ...rest}:Tbutton) {
@@ -16,7 +16,7 @@ function Button({children,variant, ...rest}:Tbutton) {
 
 export default Button
 
-function checkVariant(variant:Tvariant){
+function checkVariant(variant?:Tvariant){
 
     switch(variant){
         case "primary":

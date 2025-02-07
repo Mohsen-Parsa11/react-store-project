@@ -19,7 +19,7 @@ function Navbar() {
                 </NavLink>
             </li>
             </ul>
-            <NavLink to="/card">سبد خرید</NavLink>
+            <NavLink to="/cart">سبد خرید</NavLink>
             </div>
         
         </Container>
