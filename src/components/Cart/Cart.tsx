@@ -1,9 +1,14 @@
 import Button from "../Button/Button"
 import CardItem from "../CardItem/CardItem"
 import Container from "../Container/Container"
+import { useShopingCartContext } from "../ShopingCartContext/ShopingCartContext"
 
 
 function Cart() {
+
+  const {cartItems}= useShopingCartContext()
+  
+
   return (
   <Container>
       <div className="mb-4">

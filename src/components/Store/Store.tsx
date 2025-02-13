@@ -3,10 +3,11 @@ import Container from "../Container/Container"
 import ProductItem from "../Product Item/ProductItem"
 import { getProducts } from "../Services/API"
 import { useEffect, useState } from "react";
+import { IProduct } from "../Type/server";
 
 function Store() {
 
-  const [Product, setProduct]= useState([]);
+  const [Product, setProduct]= useState<IProduct[]>([]);
 
   useEffect(()=>{
     getProducts()
@@ -30,10 +31,14 @@ function Store() {
       <h1 className="text-end mt-6">جدید ترین محصولات</h1>
       <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-4">
     
-          <Link to={`/product/${1}`} className="mx-auto">
-            <ProductItem />
+
+        {
+          Product.map((item)=>(
+          <Link to={`/product/${item?.id}`} key={item?.id} className="mx-auto">
+            <ProductItem {...item} />
           </Link>
-        
+          ))
+        }
       </div>
     </div>
    </Container>

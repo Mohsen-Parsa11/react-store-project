@@ -1,4 +1,5 @@
 import { Children } from "react"
+import Navbar from "../Navbar/Navbar"
 
 interface Children{
     children: React.ReactNode
@@ -7,7 +8,8 @@ interface Children{
 function Layout({children}:Children) {
   return (
     <>
-        {children}
+      <Navbar />
+      {children}
     </>
   )
 }

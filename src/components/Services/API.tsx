@@ -9,3 +9,8 @@ import axios from "axios";
        const {data}= await Client("products");
        return data;
     }
+
+    export async function getProduct(id:string | number) {
+         const {data}= await Client(`products/${id}`);
+         return data;
+    }
