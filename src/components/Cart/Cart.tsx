@@ -14,10 +14,13 @@ function Cart() {
       <div className="mb-4">
       
       <div className="space-y-8 mt-8 lg:flex lg:flex-col">
-        <CardItem />
-        <CardItem />
-        <CardItem />
-        <CardItem />
+        {
+          cartItems.map((item,index)=>(
+            <div key={index}>
+              <CardItem {...item}/>
+            </div>
+          ))
+        }
       </div>
 
       <div className="px-6 lg:px-0">
