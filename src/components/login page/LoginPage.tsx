@@ -10,10 +10,10 @@ function LoginPage() {
   });
 
   const handleChangeLogin = (e: React.ChangeEvent<HTMLInputElement>) => {
-    let { name , value} = e.target;
+    let { name, value } = e.target;
     setUser({
       ...user,
-      [name]:value
+      [name]: value,
     });
   };
 
@@ -21,7 +21,7 @@ function LoginPage() {
     <div>
       <div className="mt-32 bg-blue-300 w-80 rounded mx-auto space-y-6 py-20 px-10">
         <div className="flex items-center flex-col relative">
-          <label htmlFor="userName" className="absolute left-3 -top-8">
+          <label htmlFor="userName" className="absolute flex left-3 -top-8">
             User Name:
           </label>
           <input
@@ -49,7 +49,7 @@ function LoginPage() {
         <div className="relative">
           <button
             className="border px-8 py-2 rounded text-slate-700 cursor-pointer active:scale-95 hover:opacity-80 absolute left-4"
-            onClick={()=>handleLogin(user.username, user.password)}
+            onClick={() => handleLogin(user.username, user.password)}
           >
             login
           </button>
