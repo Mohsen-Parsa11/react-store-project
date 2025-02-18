@@ -7,7 +7,6 @@ import Card from "./components/Cart/Cart";
 import NotFound from "./components/Not-Found/NotFound";
 import Product from "./components/Product/Product";
 import {
-  ShopingCartProvider,
   useShopingCartContext,
 } from "./components/ShopingCartContext/ShopingCartContext";
 import Loing from "./components/privateRoute/privateRoute";

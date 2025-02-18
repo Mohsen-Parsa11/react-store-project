@@ -22,6 +22,7 @@ import axios from "axios";
          data:{
             username,
             password
-         }
+         },
       })
+      return data;
     }

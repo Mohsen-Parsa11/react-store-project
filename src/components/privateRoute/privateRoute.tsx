@@ -1,5 +1,4 @@
-import React from 'react'
-import { ShopingCartContext, useShopingCartContext } from '../ShopingCartContext/ShopingCartContext'
+import { useShopingCartContext } from '../ShopingCartContext/ShopingCartContext'
 import { Navigate, Outlet } from 'react-router-dom';
 
 function Loing() {
@@ -8,7 +7,8 @@ function Loing() {
 
   return (
     <div>
-        {isLogin? <Outlet/>: <Navigate to="/login"/>}
+        {isLogin? <Outlet/>: <Navigate to="/
+        "/>}
     </div>
   )
 }
